@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --orange: #ff681f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #050607;
+  color: #ffffff;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-vignette {
+  background:
+    radial-gradient(circle at 50% 28%, rgba(255, 104, 31, 0.16), transparent 30%),
+    radial-gradient(circle at 0% 35%, rgba(255, 104, 31, 0.12), transparent 24%),
+    radial-gradient(circle at 100% 35%, rgba(255, 104, 31, 0.12), transparent 24%),
+    linear-gradient(180deg, #020303 0%, #07090c 62%, #040506 100%);
+}
+
+.screen-grid {
+  perspective: 1200px;
+}
+
+.hero-poster-card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.68),
+    0 0 18px rgba(255, 104, 31, 0.1);
+}
+
+.hero-poster-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 28%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 8px);
+  mix-blend-mode: screen;
+  opacity: 0.28;
+}
+
+.hero-poster-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.16), transparent 18%),
+    linear-gradient(180deg, transparent 38%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.faq-panel {
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 240ms ease;
+}
+
+.group[open] .faq-panel {
+  grid-template-rows: 1fr;
+}
+
+.group[open] .faq-plus {
+  transform: rotate(45deg);
+}
