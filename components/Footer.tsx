@@ -1,6 +1,7 @@
-import { Facebook, Instagram, MessageCircle } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { getWhatsappUrl } from "@/lib/contact";
 import { Logo } from "./Logo";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const navigation = [
   { label: "Inicio", href: "/#inicio" },
@@ -17,12 +18,6 @@ const legal = [
   { label: "Política de reembolsos", href: "/politica-de-reembolsos" },
 ];
 
-const socials = [
-  { label: "Facebook", href: "/contacto", icon: Facebook },
-  { label: "Instagram", href: "/contacto", icon: Instagram },
-  { label: "WhatsApp", href: getWhatsappUrl(), icon: MessageCircle, external: true },
-];
-
 export function Footer() {
   return (
     <footer id="contacto" className="bg-black px-5 py-10 sm:px-8">
@@ -31,18 +26,21 @@ export function Footer() {
           <Logo />
           <p className="mt-5 text-sm text-zinc-300">La mejor televisión, sin límites.</p>
           <div className="mt-5 flex gap-3">
-            {socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target={social.external ? "_blank" : undefined}
-                rel={social.external ? "noreferrer" : undefined}
-                aria-label={social.label}
-                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-ember-500"
-              >
-                <social.icon className="h-5 w-5" />
-              </a>
-            ))}
+            <a aria-label="Facebook" href="/contacto" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-ember-500">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a aria-label="Instagram" href="/contacto" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-ember-500">
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              aria-label="WhatsApp"
+              href={getWhatsappUrl()}
+              target="_blank"
+              rel="noreferrer"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-[#25d366]"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+            </a>
           </div>
         </div>
 
@@ -83,7 +81,7 @@ export function Footer() {
             className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ember-500 px-5 py-3 text-sm font-black text-white shadow-glow transition hover:bg-ember-400"
           >
             Contáctanos ahora
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
           </a>
         </div>
       </div>

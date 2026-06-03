@@ -1,6 +1,6 @@
-import { MessageCircle } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Logo } from "@/components/Logo";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { WHATSAPP_DISPLAY, getWhatsappUrl } from "@/lib/contact";
 
 export default function ContactPage() {
@@ -24,7 +24,7 @@ export default function ContactPage() {
               rel="noreferrer"
               className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-lg bg-ember-500 px-7 py-4 text-base font-black text-white shadow-glow transition hover:bg-ember-400"
             >
-              <MessageCircle className="h-6 w-6" />
+              <WhatsAppIcon className="h-6 w-6" />
               WhatsApp {WHATSAPP_DISPLAY}
             </a>
           </div>

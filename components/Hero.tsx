@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { MessageCircle, MonitorPlay, Smartphone, Tv } from "lucide-react";
+import { MonitorPlay, Smartphone, Tv } from "lucide-react";
 import { getWhatsappUrl } from "@/lib/contact";
 import { Logo } from "./Logo";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const leftHeroImage = "/hero-stream-left.png";
 const rightHeroImage = "/hero-stream-right.png";
@@ -15,14 +16,7 @@ const benefits = [
 function HeroSideImageLeft() {
   return (
     <div aria-hidden="true" className="hero-side-image hero-side-image-left">
-      <Image
-        src={leftHeroImage}
-        alt=""
-        width={980}
-        height={560}
-        priority
-        className="h-auto w-full object-contain"
-      />
+      <Image src={leftHeroImage} alt="" width={980} height={560} priority className="h-auto w-full object-contain" />
       <span className="hero-side-fade hero-side-fade-left" />
     </div>
   );
@@ -31,14 +25,7 @@ function HeroSideImageLeft() {
 function HeroSideImageRight() {
   return (
     <div aria-hidden="true" className="hero-side-image hero-side-image-right">
-      <Image
-        src={rightHeroImage}
-        alt=""
-        width={980}
-        height={560}
-        priority
-        className="h-auto w-full object-contain"
-      />
+      <Image src={rightHeroImage} alt="" width={980} height={560} priority className="h-auto w-full object-contain" />
       <span className="hero-side-fade hero-side-fade-right" />
     </div>
   );
@@ -46,18 +33,18 @@ function HeroSideImageRight() {
 
 export function Hero() {
   return (
-    <section id="inicio" className="hero-vignette relative isolate min-h-[610px] overflow-hidden px-5 py-8 sm:px-8 lg:min-h-[640px]">
+    <section id="inicio" className="hero-vignette relative isolate min-h-[720px] overflow-hidden px-5 py-7 sm:min-h-[720px] sm:px-8 lg:min-h-[680px]">
       <HeroSideImageLeft />
       <HeroSideImageRight />
-      <div className="absolute inset-0 z-[2] bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,.18)_38%,rgba(0,0,0,.74)_100%)]" />
-      <div className="absolute inset-x-0 top-0 z-[2] h-28 bg-gradient-to-b from-black to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 z-[2] h-36 bg-gradient-to-t from-black to-transparent" />
-      <div className="absolute left-1/2 top-48 z-[3] h-56 w-56 -translate-x-1/2 rounded-full bg-ember-500/20 blur-3xl" />
+      <div className="absolute inset-0 z-[2] bg-[radial-gradient(circle_at_center,rgba(0,0,0,.08)_0%,rgba(0,0,0,.36)_42%,rgba(0,0,0,.82)_100%)]" />
+      <div className="absolute inset-x-0 top-0 z-[2] h-36 bg-gradient-to-b from-black via-black/70 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 z-[2] h-44 bg-gradient-to-t from-black via-black/72 to-transparent" />
+      <div className="absolute left-1/2 top-56 z-[3] h-64 w-64 -translate-x-1/2 rounded-full bg-ember-500/22 blur-3xl sm:top-52 lg:top-48" />
 
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
         <Logo compact />
 
-        <div className="mt-8 sm:mt-9">
+        <div className="mt-7 sm:mt-8">
           <p className="text-2xl font-light tracking-[0.16em] text-white sm:text-4xl">LA MEJOR</p>
           <h1 className="mt-2 text-5xl font-black leading-none text-ember-500 drop-shadow-[0_0_32px_rgba(255,104,31,0.42)] sm:text-7xl lg:text-8xl">
             TELEVISIÓN
@@ -84,7 +71,7 @@ export function Hero() {
           className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-lg bg-ember-500 px-7 py-4 text-base font-black text-white shadow-glow transition duration-300 hover:-translate-y-1 hover:bg-ember-400 hover:shadow-[0_0_55px_rgba(255,104,31,.48)] sm:min-h-16 sm:px-12 sm:text-lg"
         >
           CONTÁCTANOS AHORA
-          <MessageCircle className="h-7 w-7 fill-white/10" />
+          <WhatsAppIcon className="h-7 w-7" />
         </a>
       </div>
     </section>

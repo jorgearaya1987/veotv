@@ -13,7 +13,7 @@ export function Logo({ compact = false }: LogoProps) {
         width={120}
         height={167}
         priority={compact}
-        className={`${compact ? "h-16 w-auto sm:h-20" : "h-20 w-auto"} drop-shadow-[0_0_26px_rgba(255,104,31,0.4)]`}
+        className={`${compact ? "h-24 w-auto sm:h-28 lg:h-32" : "h-24 w-auto"} drop-shadow-[0_0_30px_rgba(255,104,31,0.45)]`}
       />
     </div>
   );

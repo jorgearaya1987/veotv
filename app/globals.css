@@ -37,23 +37,23 @@ a {
 
 .hero-side-image {
   position: absolute;
-  top: 50%;
+  top: 118px;
   z-index: 1;
-  display: none;
-  width: min(45vw, 620px);
+  display: block;
+  width: min(86vw, 360px);
   pointer-events: none;
-  opacity: 0.72;
-  filter: saturate(1.08) contrast(1.03);
+  opacity: 0.26;
+  filter: saturate(1.05) contrast(1.02);
 }
 
 .hero-side-image-left {
-  left: 0;
-  transform: translateY(-50%);
+  left: -42vw;
+  transform: rotate(-6deg);
 }
 
 .hero-side-image-right {
-  right: 0;
-  transform: translateY(-50%);
+  right: -42vw;
+  transform: rotate(6deg);
 }
 
 .hero-side-fade {
@@ -77,9 +77,19 @@ a {
 
 @media (min-width: 768px) {
   .hero-side-image {
-    display: block;
-    width: min(46vw, 560px);
-    opacity: 0.42;
+    top: 50%;
+    width: min(48vw, 560px);
+    opacity: 0.44;
+  }
+
+  .hero-side-image-left {
+    left: -8vw;
+    transform: translateY(-50%);
+  }
+
+  .hero-side-image-right {
+    right: -8vw;
+    transform: translateY(-50%);
   }
 }
 
@@ -87,6 +97,14 @@ a {
   .hero-side-image {
     width: min(44vw, 660px);
     opacity: 0.72;
+  }
+
+  .hero-side-image-left {
+    left: 0;
+  }
+
+  .hero-side-image-right {
+    right: 0;
   }
 }
 

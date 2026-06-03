@@ -1,6 +1,7 @@
-import { Check, MessageCircle } from "lucide-react";
+import { Check } from "lucide-react";
 import { getWhatsappUrl } from "@/lib/contact";
 import { plans } from "@/lib/plans";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const features = ["+2.500 canales", "+8.000 películas", "Activación inmediata"];
 
@@ -46,7 +47,7 @@ export function PlansSection() {
                 className="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ember-500 px-4 py-3 text-center text-sm font-black text-white shadow-[0_12px_28px_rgba(255,104,31,.28)] transition duration-300 hover:bg-ember-400"
               >
                 {plan.buttonLabel}
-                <MessageCircle className="h-5 w-5" />
+                <WhatsAppIcon className="h-5 w-5" />
               </a>
             </article>
           ))}
