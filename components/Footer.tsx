@@ -2,8 +2,26 @@ import { Facebook, Instagram, MessageCircle } from "lucide-react";
 import { getWhatsappUrl } from "@/lib/contact";
 import { Logo } from "./Logo";
 
-const navigation = ["Inicio", "Planes", "¿Cómo funciona?", "Dispositivos", "Preguntas frecuentes", "Contacto"];
-const legal = ["Términos y condiciones", "Política de privacidad", "Política de reembolsos"];
+const navigation = [
+  { label: "Inicio", href: "/#inicio" },
+  { label: "Planes", href: "/#planes" },
+  { label: "¿Cómo funciona?", href: "/como-funciona" },
+  { label: "Dispositivos", href: "/dispositivos" },
+  { label: "Preguntas frecuentes", href: "/#preguntas" },
+  { label: "Contacto", href: "/contacto" },
+];
+
+const legal = [
+  { label: "Términos y condiciones", href: "/terminos-y-condiciones" },
+  { label: "Política de privacidad", href: "/politica-de-privacidad" },
+  { label: "Política de reembolsos", href: "/politica-de-reembolsos" },
+];
+
+const socials = [
+  { label: "Facebook", href: "/contacto", icon: Facebook },
+  { label: "Instagram", href: "/contacto", icon: Instagram },
+  { label: "WhatsApp", href: getWhatsappUrl(), icon: MessageCircle, external: true },
+];
 
 export function Footer() {
   return (
@@ -13,16 +31,16 @@ export function Footer() {
           <Logo />
           <p className="mt-5 text-sm text-zinc-300">La mejor televisión, sin límites.</p>
           <div className="mt-5 flex gap-3">
-            {[Facebook, Instagram, MessageCircle].map((Icon, index) => (
+            {socials.map((social) => (
               <a
-                key={index}
-                href={index === 2 ? getWhatsappUrl() : "#"}
-                target={index === 2 ? "_blank" : undefined}
-                rel={index === 2 ? "noreferrer" : undefined}
-                aria-label={index === 0 ? "Facebook" : index === 1 ? "Instagram" : "WhatsApp"}
+                key={social.label}
+                href={social.href}
+                target={social.external ? "_blank" : undefined}
+                rel={social.external ? "noreferrer" : undefined}
+                aria-label={social.label}
                 className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-ember-500"
               >
-                <Icon className="h-5 w-5" />
+                <social.icon className="h-5 w-5" />
               </a>
             ))}
           </div>
@@ -32,9 +50,9 @@ export function Footer() {
           <h3 className="font-black">NAVEGACIÓN</h3>
           <ul className="mt-5 space-y-2 text-sm text-zinc-300">
             {navigation.map((item) => (
-              <li key={item}>
-                <a className="transition hover:text-ember-500" href={item === "Planes" ? "#planes" : item === "Preguntas frecuentes" ? "#preguntas" : "#inicio"}>
-                  {item}
+              <li key={item.label}>
+                <a className="transition hover:text-ember-500" href={item.href}>
+                  {item.label}
                 </a>
               </li>
             ))}
@@ -45,9 +63,9 @@ export function Footer() {
           <h3 className="font-black">LEGAL</h3>
           <ul className="mt-5 space-y-2 text-sm text-zinc-300">
             {legal.map((item) => (
-              <li key={item}>
-                <a className="transition hover:text-ember-500" href="#">
-                  {item}
+              <li key={item.label}>
+                <a className="transition hover:text-ember-500" href={item.href}>
+                  {item.label}
                 </a>
               </li>
             ))}

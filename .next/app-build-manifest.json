@@ -12,8 +12,32 @@
       "static/chunks/fd9d1056-749e5812300142af.js",
       "static/chunks/117-e5476d4bdcce692a.js",
       "static/chunks/main-app-5cef9dff8015cd30.js",
-      "static/css/373d7f1109e05b31.css",
+      "static/css/580e0de424afd43c.css",
       "static/chunks/app/layout-cd32c84c3e33af26.js"
+    ],
+    "/como-funciona/page": [
+      "static/chunks/webpack-03c87f68c10117d4.js",
+      "static/chunks/fd9d1056-749e5812300142af.js",
+      "static/chunks/117-e5476d4bdcce692a.js",
+      "static/chunks/main-app-5cef9dff8015cd30.js",
+      "static/chunks/878-4540310b9c3960a7.js",
+      "static/chunks/app/como-funciona/page-f89eab364a4b3a61.js"
+    ],
+    "/dispositivos/page": [
+      "static/chunks/webpack-03c87f68c10117d4.js",
+      "static/chunks/fd9d1056-749e5812300142af.js",
+      "static/chunks/117-e5476d4bdcce692a.js",
+      "static/chunks/main-app-5cef9dff8015cd30.js",
+      "static/chunks/878-4540310b9c3960a7.js",
+      "static/chunks/app/dispositivos/page-3fab2f5c69ba20e3.js"
+    ],
+    "/contacto/page": [
+      "static/chunks/webpack-03c87f68c10117d4.js",
+      "static/chunks/fd9d1056-749e5812300142af.js",
+      "static/chunks/117-e5476d4bdcce692a.js",
+      "static/chunks/main-app-5cef9dff8015cd30.js",
+      "static/chunks/878-4540310b9c3960a7.js",
+      "static/chunks/app/contacto/page-ef27e0f29026cb9d.js"
     ],
     "/page": [
       "static/chunks/webpack-03c87f68c10117d4.js",
@@ -21,7 +45,31 @@
       "static/chunks/117-e5476d4bdcce692a.js",
       "static/chunks/main-app-5cef9dff8015cd30.js",
       "static/chunks/878-4540310b9c3960a7.js",
-      "static/chunks/app/page-58fde116aab900da.js"
+      "static/chunks/app/page-876d8ca1e18dda34.js"
+    ],
+    "/politica-de-privacidad/page": [
+      "static/chunks/webpack-03c87f68c10117d4.js",
+      "static/chunks/fd9d1056-749e5812300142af.js",
+      "static/chunks/117-e5476d4bdcce692a.js",
+      "static/chunks/main-app-5cef9dff8015cd30.js",
+      "static/chunks/878-4540310b9c3960a7.js",
+      "static/chunks/app/politica-de-privacidad/page-a356c1fa736df811.js"
+    ],
+    "/politica-de-reembolsos/page": [
+      "static/chunks/webpack-03c87f68c10117d4.js",
+      "static/chunks/fd9d1056-749e5812300142af.js",
+      "static/chunks/117-e5476d4bdcce692a.js",
+      "static/chunks/main-app-5cef9dff8015cd30.js",
+      "static/chunks/878-4540310b9c3960a7.js",
+      "static/chunks/app/politica-de-reembolsos/page-05bef2d3cd0fc4c0.js"
+    ],
+    "/terminos-y-condiciones/page": [
+      "static/chunks/webpack-03c87f68c10117d4.js",
+      "static/chunks/fd9d1056-749e5812300142af.js",
+      "static/chunks/117-e5476d4bdcce692a.js",
+      "static/chunks/main-app-5cef9dff8015cd30.js",
+      "static/chunks/878-4540310b9c3960a7.js",
+      "static/chunks/app/terminos-y-condiciones/page-f85440a4f9ac5af2.js"
     ]
   }
 }

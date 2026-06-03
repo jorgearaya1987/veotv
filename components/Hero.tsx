@@ -1,6 +1,10 @@
+import Image from "next/image";
 import { MessageCircle, MonitorPlay, Smartphone, Tv } from "lucide-react";
 import { getWhatsappUrl } from "@/lib/contact";
 import { Logo } from "./Logo";
+
+const leftHeroImage = "/hero-stream-left.png";
+const rightHeroImage = "/hero-stream-right.png";
 
 const benefits = [
   { icon: Tv, title: "+2.500", label: "CANALES" },
@@ -8,56 +12,34 @@ const benefits = [
   { icon: Smartphone, title: "HASTA", label: "4 DISPOSITIVOS" },
 ];
 
-const posterCards = [
-  { label: "ACCIÓN", position: "0% 0%" },
-  { label: "FANTASÍA", position: "50% 0%" },
-  { label: "CIENCIA FICCIÓN", position: "100% 0%" },
-  { label: "CRIMEN", position: "0% 50%" },
-  { label: "SUSPENSO", position: "50% 50%" },
-  { label: "AVENTURA", position: "100% 50%" },
-  { label: "MÚSICA", position: "0% 100%" },
-  { label: "DRAMA", position: "50% 100%" },
-  { label: "MISTERIO", position: "100% 100%" },
-];
-
-function PosterWall({ side }: { side: "left" | "right" }) {
-  const cards = side === "left" ? posterCards : [...posterCards].reverse();
-
+function HeroSideImageLeft() {
   return (
-    <div
-      aria-hidden="true"
-      className={`screen-grid pointer-events-none absolute top-20 hidden w-[33rem] grid-cols-3 gap-3 opacity-85 lg:grid xl:w-[37rem] ${
-        side === "left" ? "-left-28" : "-right-28"
-      }`}
-      style={{
-        transform: side === "left" ? "rotateY(20deg) rotateZ(-6deg)" : "rotateY(-20deg) rotateZ(6deg)",
-        transformOrigin: side === "left" ? "left center" : "right center",
-      }}
-    >
-      {cards.map((card, index) => {
-        const column = index % 3;
-        const row = Math.floor(index / 3);
-        const nearCenter = side === "left" ? column === 2 : column === 0;
-        const opacity = nearCenter ? 0.5 : 0.82 - column * 0.04;
+    <div aria-hidden="true" className="hero-side-image hero-side-image-left">
+      <Image
+        src={leftHeroImage}
+        alt=""
+        width={980}
+        height={560}
+        priority
+        className="h-auto w-full object-contain"
+      />
+      <span className="hero-side-fade hero-side-fade-left" />
+    </div>
+  );
+}
 
-        return (
-          <div
-            key={`${side}-${card.label}`}
-            className="hero-poster-card aspect-[3/4] rounded-md bg-cover"
-            style={{
-              backgroundImage: "url('/poster-grid.png')",
-              backgroundPosition: card.position,
-              backgroundSize: "300% 300%",
-              opacity,
-              transform: `translateY(${row * 3 + column * 12}px) scale(${nearCenter ? 0.9 : 1})`,
-            }}
-          >
-            <span className="absolute left-2.5 top-2.5 z-10 rounded-full border border-white/15 bg-black/45 px-2 py-1 text-[0.52rem] font-black tracking-[0.16em] text-white/70 backdrop-blur-md">
-              {card.label}
-            </span>
-          </div>
-        );
-      })}
+function HeroSideImageRight() {
+  return (
+    <div aria-hidden="true" className="hero-side-image hero-side-image-right">
+      <Image
+        src={rightHeroImage}
+        alt=""
+        width={980}
+        height={560}
+        priority
+        className="h-auto w-full object-contain"
+      />
+      <span className="hero-side-fade hero-side-fade-right" />
     </div>
   );
 }
@@ -65,10 +47,12 @@ function PosterWall({ side }: { side: "left" | "right" }) {
 export function Hero() {
   return (
     <section id="inicio" className="hero-vignette relative isolate min-h-[610px] overflow-hidden px-5 py-8 sm:px-8 lg:min-h-[640px]">
-      <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black to-transparent" />
-      <PosterWall side="left" />
-      <PosterWall side="right" />
+      <HeroSideImageLeft />
+      <HeroSideImageRight />
+      <div className="absolute inset-0 z-[2] bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,.18)_38%,rgba(0,0,0,.74)_100%)]" />
+      <div className="absolute inset-x-0 top-0 z-[2] h-28 bg-gradient-to-b from-black to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 z-[2] h-36 bg-gradient-to-t from-black to-transparent" />
+      <div className="absolute left-1/2 top-48 z-[3] h-56 w-56 -translate-x-1/2 rounded-full bg-ember-500/20 blur-3xl" />
 
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
         <Logo compact />

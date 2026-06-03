@@ -40,13 +40,13 @@ export function PlansSection() {
               </ul>
 
               <a
-                href={getWhatsappUrl()}
+                href={getWhatsappUrl(`Hola, quiero contratar ${plan.name} de Veo TV`)}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ember-500 px-4 py-3 text-center text-sm font-black text-white shadow-[0_12px_28px_rgba(255,104,31,.28)] transition duration-300 hover:bg-ember-400"
               >
                 {plan.buttonLabel}
-                {plan.name === "PLAN DEMO" && <MessageCircle className="h-5 w-5" />}
+                <MessageCircle className="h-5 w-5" />
               </a>
             </article>
           ))}

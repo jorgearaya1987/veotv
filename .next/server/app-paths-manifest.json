@@ -1,4 +1,10 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js"
+  "/como-funciona/page": "app/como-funciona/page.js",
+  "/dispositivos/page": "app/dispositivos/page.js",
+  "/contacto/page": "app/contacto/page.js",
+  "/page": "app/page.js",
+  "/politica-de-privacidad/page": "app/politica-de-privacidad/page.js",
+  "/politica-de-reembolsos/page": "app/politica-de-reembolsos/page.js",
+  "/terminos-y-condiciones/page": "app/terminos-y-condiciones/page.js"
 }
