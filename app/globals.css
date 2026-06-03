@@ -47,13 +47,17 @@ a {
 }
 
 .hero-side-image-left {
+  display: none;
   left: -42vw;
   transform: rotate(-6deg);
 }
 
 .hero-side-image-right {
-  right: -42vw;
-  transform: rotate(6deg);
+  left: 50%;
+  right: auto;
+  width: min(118vw, 520px);
+  opacity: 0.32;
+  transform: translateX(-50%) rotate(0deg);
 }
 
 .hero-side-fade {
@@ -83,6 +87,7 @@ a {
   }
 
   .hero-side-image-left {
+    display: block;
     left: -8vw;
     transform: translateY(-50%);
   }

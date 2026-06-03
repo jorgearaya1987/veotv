@@ -31,7 +31,7 @@ export function PlansSection() {
 
               <div className="my-7 h-px bg-white/10" />
 
-              <ul className="space-y-4 text-sm">
+              <ul className="mb-8 space-y-4 text-sm">
                 {features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
                     <Check className="h-5 w-5 shrink-0 text-ember-500" />
