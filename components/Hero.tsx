@@ -4,8 +4,7 @@ import { getWhatsappUrl } from "@/lib/contact";
 import { Logo } from "./Logo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
-const leftHeroImage = "/hero-stream-left.png";
-const rightHeroImage = "/hero-stream-right.png";
+const heroImage = "/futbol.png";
 
 const benefits = [
   { icon: Tv, title: "+2.500", label: "CANALES" },
@@ -13,20 +12,10 @@ const benefits = [
   { icon: Smartphone, title: "HASTA", label: "4 DISPOSITIVOS" },
 ];
 
-function HeroSideImageLeft() {
+function HeroMainImage() {
   return (
-    <div aria-hidden="true" className="hero-side-image hero-side-image-left">
-      <Image src={leftHeroImage} alt="" width={980} height={560} priority className="h-auto w-full object-contain" />
-      <span className="hero-side-fade hero-side-fade-left" />
-    </div>
-  );
-}
-
-function HeroSideImageRight() {
-  return (
-    <div aria-hidden="true" className="hero-side-image hero-side-image-right">
-      <Image src={rightHeroImage} alt="" width={980} height={560} priority className="h-auto w-full object-contain" />
-      <span className="hero-side-fade hero-side-fade-right" />
+    <div aria-hidden="true" className="hero-main-image">
+      <Image src={heroImage} alt="" fill priority sizes="100vw" className="object-cover" />
     </div>
   );
 }
@@ -34,8 +23,7 @@ function HeroSideImageRight() {
 export function Hero() {
   return (
     <section id="inicio" className="hero-vignette relative isolate min-h-[720px] overflow-hidden px-5 py-7 sm:min-h-[720px] sm:px-8 lg:min-h-[680px]">
-      <HeroSideImageLeft />
-      <HeroSideImageRight />
+      <HeroMainImage />
       <div className="absolute inset-0 z-[2] bg-[radial-gradient(circle_at_center,rgba(0,0,0,.08)_0%,rgba(0,0,0,.36)_42%,rgba(0,0,0,.82)_100%)]" />
       <div className="absolute inset-x-0 top-0 z-[2] h-36 bg-gradient-to-b from-black via-black/70 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 z-[2] h-44 bg-gradient-to-t from-black via-black/72 to-transparent" />

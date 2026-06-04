@@ -715,9 +715,6 @@ video {
 .h-9 {
   height: 2.25rem;
 }
-.h-auto {
-  height: auto;
-}
 .h-px {
   height: 1px;
 }
@@ -933,9 +930,9 @@ video {
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-5 {
   padding: 1.25rem;
@@ -1181,81 +1178,18 @@ a {
     linear-gradient(180deg, #020303 0%, #07090c 62%, #040506 100%);
 }
 
-.hero-side-image {
-  position: absolute;
-  top: 118px;
-  z-index: 1;
-  display: block;
-  width: min(86vw, 360px);
-  pointer-events: none;
-  opacity: 0.26;
-  filter: saturate(1.05) contrast(1.02);
-}
-
-.hero-side-image-left {
-  display: none;
-  left: -42vw;
-  transform: rotate(-6deg);
-}
-
-.hero-side-image-right {
-  left: 50%;
-  right: auto;
-  width: min(118vw, 520px);
-  opacity: 0.32;
-  transform: translateX(-50%) rotate(0deg);
-}
-
-.hero-side-fade {
+.hero-main-image {
   position: absolute;
   inset: 0;
-  z-index: 2;
-  display: block;
-}
-
-.hero-side-fade-left {
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, transparent 28%, rgba(0, 0, 0, 0.94) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 28%, rgba(0, 0, 0, 0.68));
-}
-
-.hero-side-fade-right {
-  background:
-    linear-gradient(270deg, rgba(0, 0, 0, 0.2) 0%, transparent 28%, rgba(0, 0, 0, 0.94) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 28%, rgba(0, 0, 0, 0.68));
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.62;
+  filter: saturate(1.08) contrast(1.04);
 }
 
 @media (min-width: 768px) {
-  .hero-side-image {
-    top: 50%;
-    width: min(48vw, 560px);
-    opacity: 0.44;
-  }
-
-  .hero-side-image-left {
-    display: block;
-    left: -8vw;
-    transform: translateY(-50%);
-  }
-
-  .hero-side-image-right {
-    right: -8vw;
-    transform: translateY(-50%);
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-side-image {
-    width: min(44vw, 660px);
+  .hero-main-image {
     opacity: 0.72;
-  }
-
-  .hero-side-image-left {
-    left: 0;
-  }
-
-  .hero-side-image-right {
-    right: 0;
   }
 }
 
