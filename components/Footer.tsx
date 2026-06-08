@@ -1,4 +1,3 @@
-import { Facebook, Instagram } from "lucide-react";
 import { getWhatsappUrl } from "@/lib/contact";
 import { Logo } from "./Logo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
@@ -26,18 +25,12 @@ export function Footer() {
           <Logo />
           <p className="mt-5 text-sm text-zinc-300">La mejor televisión, sin límites.</p>
           <div className="mt-5 flex gap-3">
-            <a aria-label="Facebook" href="/contacto" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-ember-500">
-              <Facebook className="h-5 w-5" />
-            </a>
-            <a aria-label="Instagram" href="/contacto" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-ember-500">
-              <Instagram className="h-5 w-5" />
-            </a>
             <a
               aria-label="WhatsApp"
               href={getWhatsappUrl()}
               target="_blank"
               rel="noreferrer"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition hover:bg-[#25d366]"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-[#25d366] transition hover:bg-[#25d366] hover:text-white"
             >
               <WhatsAppIcon className="h-5 w-5" />
             </a>
@@ -81,7 +74,7 @@ export function Footer() {
             className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ember-500 px-5 py-3 text-sm font-black text-white shadow-glow transition hover:bg-ember-400"
           >
             Contáctanos ahora
-            <WhatsAppIcon className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5 text-[#25d366] drop-shadow-[0_0_6px_rgba(37,211,102,.4)]" />
           </a>
         </div>
       </div>

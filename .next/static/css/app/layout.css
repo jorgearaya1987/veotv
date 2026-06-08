@@ -1065,11 +1065,18 @@ video {
 .tracking-\[0\.16em\] {
   letter-spacing: 0.16em;
 }
+.tracking-\[0\.18em\] {
+  letter-spacing: 0.18em;
+}
 .tracking-tight {
   letter-spacing: -0.025em;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+.text-\[\#25d366\] {
+  --tw-text-opacity: 1;
+  color: rgb(37 211 102 / var(--tw-text-opacity, 1));
 }
 .text-ember-400 {
   --tw-text-opacity: 1;
@@ -1134,6 +1141,14 @@ video {
 }
 .drop-shadow-\[0_0_32px_rgba\(255\2c 104\2c 31\2c 0\.42\)\] {
   --tw-drop-shadow: drop-shadow(0 0 32px rgba(255,104,31,0.42));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.drop-shadow-\[0_0_6px_rgba\(37\2c 211\2c 102\2c \.4\)\] {
+  --tw-drop-shadow: drop-shadow(0 0 6px rgba(37,211,102,.4));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.drop-shadow-\[0_0_8px_rgba\(37\2c 211\2c 102\2c \.45\)\] {
+  --tw-drop-shadow: drop-shadow(0 0 8px rgba(37,211,102,.45));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition {
@@ -1230,14 +1245,14 @@ a {
   background-color: rgb(255 138 53 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-ember-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 104 31 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:text-ember-500:hover {
   --tw-text-opacity: 1;
   color: rgb(255 104 31 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:shadow-\[0_0_55px_rgba\(255\2c 104\2c 31\2c \.48\)\]:hover {
@@ -1314,6 +1329,11 @@ a {
     padding-left: 5rem;
   }
 
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1377,6 +1397,11 @@ a {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:text-8xl {

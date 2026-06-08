@@ -24,7 +24,7 @@ export default function ContactPage() {
               rel="noreferrer"
               className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-lg bg-ember-500 px-7 py-4 text-base font-black text-white shadow-glow transition hover:bg-ember-400"
             >
-              <WhatsAppIcon className="h-6 w-6" />
+              <WhatsAppIcon className="h-6 w-6 text-[#25d366] drop-shadow-[0_0_6px_rgba(37,211,102,.4)]" />
               WhatsApp {WHATSAPP_DISPLAY}
             </a>
           </div>

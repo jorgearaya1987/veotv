@@ -37,7 +37,8 @@ export function Hero() {
           <h1 className="mt-2 text-5xl font-black leading-none text-ember-500 drop-shadow-[0_0_32px_rgba(255,104,31,0.42)] sm:text-7xl lg:text-8xl">
             TELEVISIÓN
           </h1>
-          <p className="mt-3 text-2xl font-light tracking-[0.16em] text-white sm:text-4xl">SIN LÍMITES</p>
+          <p className="mt-3 text-xl font-light tracking-[0.18em] text-white sm:text-3xl lg:text-4xl">VIVE EL MUNDIAL</p>
+          <p className="mt-2 text-2xl font-light tracking-[0.16em] text-white sm:text-4xl">SIN LÍMITES</p>
         </div>
 
         <div className="mt-10 grid w-full max-w-xl grid-cols-3 gap-3 sm:gap-8">
@@ -59,7 +60,7 @@ export function Hero() {
           className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-lg bg-ember-500 px-7 py-4 text-base font-black text-white shadow-glow transition duration-300 hover:-translate-y-1 hover:bg-ember-400 hover:shadow-[0_0_55px_rgba(255,104,31,.48)] sm:min-h-16 sm:px-12 sm:text-lg"
         >
           CONTÁCTANOS AHORA
-          <WhatsAppIcon className="h-7 w-7" />
+          <WhatsAppIcon className="h-7 w-7 text-[#25d366] drop-shadow-[0_0_8px_rgba(37,211,102,.45)]" />
         </a>
       </div>
     </section>
