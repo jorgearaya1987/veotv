@@ -60,7 +60,7 @@ export function Hero() {
           className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-lg bg-ember-500 px-7 py-4 text-base font-black text-white shadow-glow transition duration-300 hover:-translate-y-1 hover:bg-ember-400 hover:shadow-[0_0_55px_rgba(255,104,31,.48)] sm:min-h-16 sm:px-12 sm:text-lg"
         >
           CONTÁCTANOS AHORA
-          <WhatsAppIcon className="h-7 w-7 text-[#25d366] drop-shadow-[0_0_8px_rgba(37,211,102,.45)]" />
+          <WhatsAppIcon className="h-7 w-7" />
         </a>
       </div>
     </section>

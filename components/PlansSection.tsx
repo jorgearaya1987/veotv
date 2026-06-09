@@ -47,7 +47,7 @@ export function PlansSection() {
                 className="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-ember-500 px-4 py-3 text-center text-sm font-black text-white shadow-[0_12px_28px_rgba(255,104,31,.28)] transition duration-300 hover:bg-ember-400"
               >
                 {plan.buttonLabel}
-                <WhatsAppIcon className="h-5 w-5 text-[#25d366] drop-shadow-[0_0_6px_rgba(37,211,102,.4)]" />
+                <WhatsAppIcon className="h-5 w-5" />
               </a>
             </article>
           ))}
